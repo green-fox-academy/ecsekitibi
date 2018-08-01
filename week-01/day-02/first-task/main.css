@@ -1,0 +1,50 @@
+@import url(https://fonts.google.com/?selection.family=Raleway);
+
+body {
+    font-family: 'Raleway';
+    margin: 0px;
+    background-image: url(file:///home/ecsekitibi/Asztal/Greenfox/topography.png);
+    background-repeat:repeat;
+
+}
+
+.text {
+    padding: 10%;
+}
+
+.google {
+    position: absolute;
+    left: 10%;
+    top: 10px;
+
+}
+
+.linkek {
+    position: absolute;
+    word-spacing: 30px;
+    box-align: center;
+    right: 10%; 
+    top: 20px;
+
+}
+a {
+    color:  #ff0099;
+}
+.navibar {
+    height: 50px;
+    margin-right: 0%;
+    background-color: #333333; 
+}
+
+h2 {
+    color: #ff0099;
+
+}
+h3 {
+    text-align: center;
+    font-size: 30px;
+}
+h4 {
+    text-align: center;
+    font-size: 30px;
+}
