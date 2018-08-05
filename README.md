@@ -1,5 +1,7 @@
 # ecsekitibi
 
+Hi, my name is Tibi Ecseki and this is my repository for GreenFoxAcademy.
+
 Here are my recent repos: 
 
 [Helloworld repo](https://github.com/ecsekitibi/helloworld.git)
@@ -8,6 +10,8 @@ Here are my recent repos:
 
 [forked repo](https://github.com/ecsekitibi/git-lesson-repository.git)
 
+Other stuff:
+
 [My very first website](https://ecsekitibi.github.io)
 
-[And here is my teams syllabus] (https://github.com/green-fox-academy/coffee-syllabus)
+[And here is my teams syllabus](https://github.com/green-fox-academy/coffee-syllabus)
