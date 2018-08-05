@@ -1,17 +1,7 @@
 'use strict';
 export {}
 
-let linesCount: number = 4;
-let space = '';
-
-
-
-for (let i = 0; i < linesCount; i++) {
-    for (let j = 4; j < 8; j++) {
-        space = space + '*';
-    }
-     console.log(space);
-}
+let lineCount: number = 4;
 
 // Write a program that draws a
 // pyramid like this:
@@ -22,3 +12,16 @@ for (let i = 0; i < linesCount; i++) {
 // *******
 //
 // The pyramid should have as many lines as lineCount is
+
+let space = ' ';
+let star = '*';
+
+for (let i = 0; i < lineCount; i++) {
+    for (let j = i; j < lineCount; j++) {
+        space += ' ';
+    }
+    console.log( space + star );
+    space = ' ';
+    star += '**';
+    
+}
