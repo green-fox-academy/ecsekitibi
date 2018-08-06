@@ -8,7 +8,7 @@ Here are my recent repos:
 
 [Patchwork repo](https://github.com/ecsekitibi/patchwork.git)
 
-[forked repo](https://github.com/ecsekitibi/git-lesson-repository.git)
+[Forked repo](https://github.com/ecsekitibi/git-lesson-repository.git)
 
 Other stuff:
 
