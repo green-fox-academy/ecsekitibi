@@ -1,6 +1,6 @@
 # ecsekitibi
 
-Hi, my name is Tibi Ecseki and this is my repository for GreenFoxAcademy.
+Hi, my name is Tibi Ecseki and this is my repository for [GreenFoxAcademy].(https://greenfoxacademy.com)
 
 Here are my recent repos: 
 
