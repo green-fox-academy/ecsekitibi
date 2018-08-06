@@ -9,11 +9,11 @@ export {}
 
 let name: string = ' Greenfox';
 
-function greet(par?: string) {
-    if (par == undefined) {
+function greet(parameters: string) {
+    if (parameters == undefined) {
         console.log("Greetings, dear friend!");
     } else {
-        console.log("Greetings, dear" + par);
+        console.log("Greetings, dear" + parameters);
             }
     }
 
