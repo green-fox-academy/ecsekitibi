@@ -14,9 +14,9 @@ function putSaturn(inputArray:string[]) {
 }
  
 putSaturn(planetList);
-
+ 
 // I tested on a different array
-let starNames: string[] = ['Rudi' , 'Soma', 'Tibi'];
-putSaturn(starNames)
+// let starNames: string[] = ['Rudi' , 'Soma', 'Tibi'];
+// putSaturn(starNames)
 
-putSaturn(['alma', 'barack']);
+// putSaturn(['alma', 'barack']);

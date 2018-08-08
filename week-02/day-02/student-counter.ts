@@ -23,14 +23,14 @@ function sumOfCandies(eachStudent: any[]) {
     })
     return candyOfStudent;
 }
-console.log('Numbers of candies owned by students: ' + sumOfCandies(students));
+console.log(' Numbers of candies owned by students: ' + sumOfCandies(students));
 
 function sumOfAgeWhoLessThan5Candies(eachStudent: any[]) {
     let sumOfAge: number = 0;
     eachStudent.forEach(obj => {
-        if(obj.candies < 5) sumOfAge += obj.age;
-
-    })
+        if(obj.candies < 5)
+        {sumOfAge += obj.age;
+    }})
     return sumOfAge;
 }
 console.log('Sum of the age of people who have less than 5 candies: ' + sumOfAgeWhoLessThan5Candies(students));
