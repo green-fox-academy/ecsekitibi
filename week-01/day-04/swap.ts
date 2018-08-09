@@ -5,9 +5,7 @@
 let a: number = 123;
 let b: number = 526;
 
-a = a ^ b;
-b = b ^ a;
-a = a ^ b;
+[a , b] = [b, a]
 
 console.log(a);     
 console.log(b);
