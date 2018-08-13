@@ -9,7 +9,7 @@ export {}
 let typo : string = 'Chinchill';
 
 function appendAFunc(params:string) {
-    return params = typo + 'a';
+    return params = params + 'a';
     
 }
 let answer = appendAFunc(typo);
