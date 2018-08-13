@@ -1,8 +1,8 @@
 # ecsekitibi
 
-Hi, my name is Tibi Ecseki and this is my repository for [GreenFoxAcademy](https://greenfoxacademy.com).
+Hi, my name is Tibi Ecseki and here is my progress and my repositories for [GreenFoxAcademy](https://greenfoxacademy.com).
 
-Here are my recent repos: 
+
 
 [Helloworld repo](https://github.com/ecsekitibi/helloworld.git)
 
