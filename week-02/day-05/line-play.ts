@@ -28,18 +28,18 @@ ctx.lineTo(canvas.width, 100)
 ctx.stroke();  
 */
 
-for (let i = 0; i < canvas.height; i += 10) {
-    ctx.strokeStyle = 'purple';
+function drawGraph(graphStyle: string, startX: number, startY: number, endX: number, endY: number) {
+    ctx.strokeStyle = graphStyle;
     ctx.beginPath();
-    ctx.moveTo(i, 0);
-    ctx.lineTo(canvas.width, 10 + i);
+    ctx.moveTo(startX, startY);
+    ctx.lineTo(endX, endY);
     ctx.stroke();
 }
 
+for (let i = 0; i < canvas.height; i += 10) {
+    drawGraph('purple', i, 0, canvas.width, 10 + i );
+    
+
 for (let j = 0; j < canvas.width; j += 10) {
-    ctx.strokeStyle = 'green';
-    ctx.beginPath();
-    ctx.moveTo(0, j);
-    ctx.lineTo(j + 10, canvas.height);
-    ctx.stroke();
+    drawGraph('green', 0, j, j + 10, canvas.height)
 }

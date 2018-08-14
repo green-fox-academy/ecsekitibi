@@ -8,9 +8,10 @@ let boys: string[] = ['Joe', 'Fred', 'Tom', 'Todd', 'Neef', 'Jeff'];
 function matchPeople(girlNames: string[], boyNames: string[]) {
     let matches: string[] = [];
 
-    girlNames.map((girl, index) => {
+    girlNames.forEach((girl, index) => {
         matches.push(girlNames[index]);
         matches.push(boyNames[index]);
+
     });
 
     console.log(matches);
