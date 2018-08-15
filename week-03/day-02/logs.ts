@@ -9,10 +9,25 @@ const fs = require('fs');
 const charEncoding = 'utf-8'
 
 function readLog(fileName: string) {
-    
-        let fileContent: string= fs.readFileSync(fileName, charEncoding);
-        let fileContentArray: string[] = fileContent.split('\n');
-        return fileContentArray;
-        
+    let fileContent: string [] = fs.readFileSync(fileName, charEncoding).split('\n');
+    return fileContent;
 }
-console.log(readLog('log.txt'));
+function listIPs(fileName: string) {
+    let ipContent: string [] = [];
+    readLog(fileName).forEach(eachElements => ipContent.push(eachElements.slice(27,38)));
+    let uniqueIPs: string[] = [];
+    ipContent.forEach(function(eachElement: string) {
+        if(uniqueIPs.every(param => param !== eachElement)) {
+            uniqueIPs.push(eachElement);
+        }
+    });
+    return uniqueIPs;
+    
+}
+console.log(listIPs('log.txt'));
+console.log(listIPs('log.txt').length);
+
+
+
+
+
