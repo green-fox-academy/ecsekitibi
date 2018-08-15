@@ -9,25 +9,37 @@ const fs = require('fs');
 const charEncoding = 'utf-8'
 
 function readLog(fileName: string) {
-    let fileContent: string [] = fs.readFileSync(fileName, charEncoding).split('\n');
+    let fileContent: string[] = fs.readFileSync(fileName, charEncoding).split('\n');
     return fileContent;
 }
+
 function listIPs(fileName: string) {
-    let ipContent: string [] = [];
-    readLog(fileName).forEach(eachElements => ipContent.push(eachElements.slice(27,38)));
+    let ipContent: string[] = [];
+    readLog(fileName).forEach(eachElements => ipContent.push(eachElements.slice(27, 38)));
     let uniqueIPs: string[] = [];
-    ipContent.forEach(function(eachElement: string) {
-        if(uniqueIPs.every(param => param !== eachElement)) {
+    ipContent.forEach(function (eachElement: string) {
+        if (uniqueIPs.every(param => param !== eachElement)) {
             uniqueIPs.push(eachElement);
         }
     });
     return uniqueIPs;
-    
 }
 console.log(listIPs('log.txt'));
-console.log(listIPs('log.txt').length);
 
+function getPostRatio(fileName: string) {
+    let everyPost: number = 0;
+    let everyGet: number = 0;
+    let contentOfArray: string[] = [];
+    contentOfArray = fs.readFileSync(fileName, charEncoding).split('\n');
+    contentOfArray.forEach(elements => {
+        if(elements.toString().match(/GET/) !== null) {
+            everyPost ++;
+        } else {
+            everyGet++;
+        }
+    }); 
+    return everyPost / everyGet;
 
-
-
+}
+console.log(getPostRatio('log.txt'));
 
