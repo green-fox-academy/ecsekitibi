@@ -11,7 +11,7 @@ export class Animal {
     private hunger: number;
     private thirst: number;
 
-    constructor(hunger: number, thirst: number) {
+    constructor(hunger: number = 50, thirst: number =50) {
         this.hunger = hunger;
         this.thirst = thirst;
     }
