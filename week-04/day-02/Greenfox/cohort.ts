@@ -1,5 +1,3 @@
-import { Student } from "./student";
-import { Mentor } from "./mentor";
 
 export class Cohort {
     name: string;

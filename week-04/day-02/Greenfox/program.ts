@@ -33,19 +33,19 @@ people.push(sponsor);
 student.skipDays(3);
 
 for (let i: number = 0; i < 6; i++) {
-    elon.hire();
+  elon.hire();
 }
 
 for (let i: number = 0; i < 4; i++) {
-    sponsor.hire();
+  sponsor.hire();
 }
 
 for (let person of people) {
-    person.introduce();
-    person.getGoal();
+  person.introduce();
+  person.getGoal();
 }
 
-let awesome: Cohort = new Cohort("AWESOME");
+let awesome: Cohort= new Cohort("AWESOME");
 awesome.addStudent(student);
 awesome.addStudent(john);
 awesome.addMentor(mentor);
