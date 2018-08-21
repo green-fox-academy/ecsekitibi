@@ -18,7 +18,7 @@ class PostIt {
     constructor(text: string, textColor: string, backgroundColor: string) {
         this.text = text;
         this.textColor = textColor; 
-        this.backgroundColor = backgroundColor
+        this.backgroundColor = backgroundColor;
     }
 }
 let postIt1: Object = new PostIt('Idea 1','blue','orange');

@@ -1,7 +1,16 @@
+/*
+Reuse your Animal class
+Create a Farm class
+it has list of Animals
+it has slots which defines the number of free places for animals
+breed() -> creates a new animal if there's place for it
+slaughter() -> removes the least hungry animal
+*/
+
 import { Animal } from "./animal";
 
 class Farm {
-    private animals: Animal [];
+    private animals: Animal[];
     private freeSlots: number;
 
     constructor() {
@@ -26,7 +35,6 @@ class Farm {
                 let currentAnimal: Animal = this.animals[i];
                 if (currentAnimal.getHungry() < leastHungry.getHungry()) {
                     index = i;
-
                 }
             }
             this.animals.splice(index, 1);
