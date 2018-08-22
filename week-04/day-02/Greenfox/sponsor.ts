@@ -10,8 +10,8 @@ export class Sponsor extends Person {
         this.hiredStudents = hiredStudents;
     }
 
-    introduce() {
-        console.log(`Hi, I\'m ${this.name}, a ${this.age} year old ${this.gender} who represents ${this.company} and hired ${this.hiredStudents} students so far.`);
+    introduce(): string {
+        return(`Hi, I\'m ${this.name}, a ${this.age} year old ${this.gender} who represents ${this.company} and hired ${this.hiredStudents} students so far.`);
     }
 
     hire() {

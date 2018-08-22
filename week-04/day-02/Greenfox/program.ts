@@ -6,8 +6,7 @@ import { Cohort } from "./cohort";
 
 let people: Person[] = [];
 
-let mark: Person = new Person("Mark", 46, "male");
-people.push(mark);
+people.push(new Person("Mark", 46, "male"));
 
 let jane: Person = new Person();
 people.push(jane);

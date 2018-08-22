@@ -1,8 +1,10 @@
+import { Mentor } from "./mentor";
+import { Student } from "./student";
 
 export class Cohort {
     name: string;
-    students: string[];
-    mentors: string[];
+    students: Student[];
+    mentors: Mentor[];
 
     constructor(name: string) {
         this.name = name;
@@ -10,12 +12,12 @@ export class Cohort {
         this.mentors = [];
     }
 
-    addStudent(Student) {
-        this.students.push(Student);
+    addStudent(student: Student) {
+        this.students.push(student);
     }
 
-    addMentor(Mentor) {
-        this.mentors.push(Mentor);
+    addMentor(mentor: Mentor) {
+        this.mentors.push(mentor);
     }
 
     info() {
