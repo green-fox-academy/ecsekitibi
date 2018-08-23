@@ -29,15 +29,15 @@ export class Garden {
 
     print(): void {
         this.flowers.forEach(item => {
-            if (item.needWater()) { console.log(`The ${item.getColor} Flower needs water.`) }
+            if (item.needWater()) { console.log(`The ${item.getColor()} Flower needs water.`) }
             else {
-                console.log(`The ${item.getColor} Flower doesnt need water.`);
+                console.log(`The ${item.getColor()} Flower doesn't need water.`);
             }
         });
         this.trees.forEach(item => {
-            if (item.needWater()) { console.log(`The ${item.getColor} Tree needs water.`) }
+            if (item.needWater()) { console.log(`The ${item.getColor()} Tree needs water.`) }
             else {
-                console.log(`The ${item.getColor} Tree doesnt need water.`);
+                console.log(`The ${item.getColor()} Tree doesn't need water.`);
             }
         });
     }
