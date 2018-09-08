@@ -22,7 +22,7 @@ console.log(d);
 
 let e: number = 8;
 // what's the cube of e's value?
-c ** 3;
+e **=  3;
 console.log(e);
 
 let f1: number = 123;

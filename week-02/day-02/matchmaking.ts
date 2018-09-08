@@ -5,15 +5,13 @@ export { }
 let girls: string[] = ['Eve', 'Ashley', 'Claire', 'Kat', 'Jane'];
 let boys: string[] = ['Joe', 'Fred', 'Tom', 'Todd', 'Neef', 'Jeff'];
 
-function matchPeople(girlNames: string[], boyNames: string[]) {
+function matchPeople(girlNames: string[], boyNames: string[]): string[] {
     let matches: string[] = [];
 
-    girlNames.forEach((girl, index) => {
+    girlNames.forEach((girls, index) => {
         matches.push(girlNames[index]);
         matches.push(boyNames[index]);
-
     });
-
     console.log(matches);
     return matches;
 };

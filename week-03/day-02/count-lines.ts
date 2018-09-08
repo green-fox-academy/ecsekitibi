@@ -12,12 +12,12 @@ const charEncoding = 'utf-8'
 function countLines(fileName: string) {
     //let countLines: number = 0;
     try {
-    let fileContent: string = fs.readFileSync(fileName, charEncoding);
-    //console.log(fileContent);
-    let fileContentArray: string[] = fileContent.split('\n');
-    //console.log(fileContentArray);
-    let countLines = fileContentArray.length;
-    return countLines;
+        let fileContent: string = fs.readFileSync(fileName, charEncoding);
+        console.log(fileContent);
+        let fileContentArray: string[] = fileContent.split('\n');
+        console.log(fileContentArray);
+        let countLines: number = fileContentArray.length;
+        return countLines;
     } catch (e) {
         return 0;
     }

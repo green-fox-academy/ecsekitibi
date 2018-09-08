@@ -17,4 +17,9 @@ let hashmap = {
   3: 'say goodbye '
 };
 
+for (let i = 0; i < notSoCrypticMessage.length; i++) {
+  let decriptedMessage: number = notSoCrypticMessage[i]
+  out += hashmap[decriptedMessage]
+}
+
 console.log(out)

@@ -5,9 +5,7 @@
 // -  bonus for using the correct built in array method
 
 let integers: number[] = [4, 5, 6, 7]
-integers.forEach(function(numbers:number) {
-    console.log(numbers);
-    
+integers.forEach(function (numbers: number) {
 })
 integers.forEach(numbers => console.log(numbers)
 );

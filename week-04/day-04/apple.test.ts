@@ -1,4 +1,4 @@
-const test = require('tape');
+    const test = require('tape');
 import { myObject } from "./apple";
 
 test ("Apple test", (test) => {

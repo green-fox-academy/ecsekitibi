@@ -9,15 +9,14 @@ console.log(containsSeven(numbers));
 export = containsSeven;
 
 
-function containsSeven(findSeven:number[]) {
+function containsSeven(findSeven: number[]) {
     if (findSeven.indexOf(7) > 0) {
-    console.log('Hoorray');
-           
+        console.log('Hoorray');
     } else {
         console.log('Nooooo');
-        
+
     }
-    
+
 }
 
 

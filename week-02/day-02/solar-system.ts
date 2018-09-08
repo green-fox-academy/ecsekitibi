@@ -1,5 +1,5 @@
 'use strict'
-export{}
+export { }
 // Saturn is missing from the planetList
 // Insert it into the correct position
 // Create a function called putSaturn() which has list parameter and returns the correct list.
@@ -7,16 +7,16 @@ export{}
 let planetList: string[] = ['Mercury', 'Venus', 'Earth', 'Mars', 'Jupiter', 'Uranus', 'Neptune'];
 // Expected output: "Mercury", "Venus", "Earth", "Mars", "Jupiter", "Uranus", "Neptune", "Saturn"
 
-function putSaturn(inputArray:string[]) {
+function putSaturn(inputArray: string[]) {
     inputArray.push('Saturn');
     return console.log(inputArray);
-    
-}
- 
-putSaturn(planetList);
- 
-// I tested on a different array
-// let starNames: string[] = ['Rudi' , 'Soma', 'Tibi'];
-// putSaturn(starNames)
 
-// putSaturn(['alma', 'barack']);
+}
+
+putSaturn(planetList);
+
+// I tested on a different array
+let starNames: string[] = ['Rudi', 'Soma', 'Tibi'];
+putSaturn(starNames)
+
+putSaturn(['alma', 'barack']);
