@@ -10,16 +10,21 @@ which decreases inkAmount
 
 export class Sharpie {
   private color: string;
-  private width: string;
+  private width: number;
   private inkAmount: number;
 
-  constructor(color: string, width: string) {
+  constructor(color: string, width: number) {
     this.color = color;
     this.width = width;
     this.inkAmount = 100;
   }
 
-  use(): number {
-    return this.inkAmount - 10;
+  use(): void {
+    this.inkAmount -= 10;
   }
+
+  getInkAmount(): number {
+    return this.inkAmount
+  }
+
 }

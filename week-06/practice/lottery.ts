@@ -9,45 +9,54 @@ const fs = require('fs');
 const charEncoding = 'utf-8'
 
 function readFileSync(fileName: string) {
+
+  let filePath: string = fileName + '.csv';
   try {
-    let fileContent: string = fileName + '.csv';
-    fileContent = fs.readFileSync(fileContent, charEncoding)
+    let fileContent: string = fs.readFileSync(filePath, charEncoding);
     return fileContent
   } catch (e) {
-    return `The file you want to load doesnt exist`
+    throw new Error('The file you want to load doesnt exist')
   }
+
 }
+
 
 function mostFrequentLotteryNumber(fileName: string) {
   let textArray: any[] = [];
   let splittedArray: any[] = [];
   let lotteryNumbers: any[] = [];
   let eachLottery: any[] = [];
-  let currentNumber: number = 0;
+
   let maxNumber: number = 0;
   let mostfrequentNumber: number;
   textArray = readFileSync(fileName).split('\n');
   for (let i = 0; i < textArray.length; i++) {
     splittedArray.push(textArray[i].split(';'));
   }
-
   splittedArray.forEach(element => {
     lotteryNumbers.push(element.slice(element.length - 5, element.length))
   })
+
   eachLottery = lotteryNumbers.join(',').split(',');
+  console.log(eachLottery.length);
+
+
   for (let i = 0; i < eachLottery.length; i++) {
+    let currentNumber: number = 0;
     for (let j = 0; j < eachLottery.length; j++) {
       if (eachLottery[i] === eachLottery[j]) {
         currentNumber++;
-        if (currentNumber > maxNumber) {
-          maxNumber = currentNumber
-          mostfrequentNumber = eachLottery[i];
-        }
       }
     }
-
+    if (currentNumber > maxNumber) {
+      maxNumber = currentNumber
+      mostfrequentNumber = eachLottery[i];
+    }
+    console.log(mostfrequentNumber, maxNumber);
   }
-  return mostfrequentNumber;
 }
-console.log(mostFrequentLotteryNumber('lottery'));
+
+
+//console.log(mostFrequentLotteryNumber('lottery'));
+mostFrequentLotteryNumber('lottery');
 
