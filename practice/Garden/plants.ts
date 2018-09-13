@@ -4,14 +4,22 @@ export abstract class Plant {
   color: string;
   currentAmountOfWater: number;
   waterAbsorb: number;
+  needsWaterAmount: number
 
-  constructor(color: string, currentAmountOfWater: number, waterAbsorb: number) {
+  constructor(color: string, waterAbsorb: number, needsWaterAmount: number) {
     this.color = color;
-    this.currentAmountOfWater = currentAmountOfWater;
+    this.currentAmountOfWater = 0;
     this.waterAbsorb = waterAbsorb;
+    this.needsWaterAmount = needsWaterAmount;
   }
 
-  abstract needsWater(): void;
+  needsWater(): boolean {
+    return this.currentAmountOfWater < this.needsWaterAmount;
+  }
 
-  abstract useWater(): void;
+  waterUsage(waterAmount: number): number {
+    this.currentAmountOfWater += waterAmount * this.waterAbsorb;
+    return this.currentAmountOfWater;
+  }
+
 }

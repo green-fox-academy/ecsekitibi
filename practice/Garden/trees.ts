@@ -4,20 +4,8 @@ import { Plant } from "./plants";
 
 export class Tree extends Plant {
 
-  constructor(color: string = "purple") {
-    super(color, 0, 0.4)
+  constructor(color: string) {
+    super(color, 0.4, 10)
   }
 
-  needsWater(): boolean {
-    if (this.currentAmountOfWater < 10) {
-      return true;
-    } else {
-      return false;
-    }
-  }
-
-  useWater(waterAmount: number): number {
-    return super.currentAmountOfWater = super.waterAbsorb * waterAmount
-
-  }
 }
