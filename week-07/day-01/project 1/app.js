@@ -84,6 +84,51 @@ app.post('/dountil/:action', jsonParser, (req, res) => {
   }
 })
 
+function sumNumbers(numberArray) {
+  let total = 0;
+  numberArray.forEach(element => {
+    total += element
+  });
+  return total;
+}
+
+function multiplyNumbers(numberArray) {
+  let total = 1;
+  numberArray.forEach(element => {
+    total *= element;
+  });
+  return total;
+}
+
+function doubleNumbers(numberArray) {
+  let doubleArray = [];
+  doubleArray = numberArray.map(elem => {
+    return elem * 2;
+  })
+  return doubleArray;
+}
+
+
+app.post('/array', jsonParser, (req, res) => {
+  if (req.body.what === "sum") {
+    res.json({
+      "result": sumNumbers(req.body.numbers)
+    })
+  } else if (req.body.what === "multiply") {
+    res.json({
+      "result": multiplyNumbers(req.body.numbers)
+    })
+  } else if (req.body.what === "double") {
+    res.json({
+      "result": doubleNumbers(req.body.numbers)
+    })
+  } else {
+    res.json({
+      "error": "Please provide what to do with the numbers!"
+    })
+  }
+})
+
 app.listen(PORT, () => {
   console.log(`The server is up and running on ${PORT}`);
 });
