@@ -99,6 +99,38 @@ app.put('/posts/:id/downvote', jsonParser, function (req, res) {
   });
 });
 
+app.delete('/posts/:id', function (req, res) {
+  connection.query(`DELETE FROM posts WHERE id=${req.params.id};`, function (err, results) {
+    if (err) {
+      console.log(err.toString());
+      res.status(500).send('Database error');
+      return;
+    }
+    res.status(200).send(`Deleting was succesful on id= ${req.params.id}`)
+  })
+});
+
+app.put('/posts/:id', jsonParser, function (req, res) {
+  connection.query(`UPDATE posts SET title="${req.body.title}", url="${req.body.url}" WHERE id=${req.params.id};`, function (err, results) {
+    if (err) {
+      console.log(err.toString());
+      res.status(500).send('Database error');
+      return;
+    }
+    connection.query(`SELECT * FROM posts WHERE id=${req.params.id};`, function (err, results) {
+      if (err) {
+        console.log(err.toString());
+        res.status(500).send('Database error');
+        return;
+      }
+      res.status(200).json({
+        updated: results
+      });
+    })
+  })
+})
+
+
 app.listen(PORT, () => {
   console.log(`The server is up and running on ${PORT}`);
 });
