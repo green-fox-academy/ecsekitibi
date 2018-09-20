@@ -1,5 +1,7 @@
 import { Flower } from "./flowers";
 import { Tree } from "./trees";
+import { Plant } from "./plants";
+
 
 /*
 The Garden Application
@@ -50,61 +52,40 @@ eg. watering with 10 the tree's amount of water should only increase with 4
 export class Garden {
   flower: Flower[];
   tree: Tree[];
-  
+  plants: Plant[];
 
   constructor() {
     this.flower = [];
     this.tree = [];
+    this.plants = [];
   }
 
-  addFlowers(flower: Flower): void {
-    this.flower.push(flower)
-  }
-  addTrees(tree: Tree): void {
-    this.tree.push(tree)
+  addPlants(inputPlants: Plant) {
+    this.plants.push(inputPlants);
   }
 
   watering(amountOfWater: number): void {
     let counter: number = 0;
-    this.flower.forEach(item => {
-      if (item.needsWater()) {
-        counter++;
-      }
-    });
-    this.tree.forEach(item => {
+    this.plants.forEach(item => {
       if (item.needsWater()) {
         counter++;
       }
     });
 
-    this.flower.forEach(item => {
+    this.plants.forEach(item => {
       item.waterUsage(amountOfWater / counter);
     })
 
-    this.tree.forEach(item => {
-      item.waterUsage(amountOfWater / counter);
-    })
     console.log(`Watering with ${amountOfWater}`);
   }
 
   getStatus(): void {
-    this.flower.forEach(item => {
+    this.plants.forEach(item => {
       if (item.needsWater()) {
-        console.log(`The ${item.color} flower needs water`);
+        console.log(`The ${item.getColor()} ${item.getType()} needs water`);
       } else {
-        console.log(`The ${item.color} flower doesnt needs water`);
-      }
-    });
-    this.tree.forEach(item => {
-      if (item.needsWater()) {
-        console.log(`The ${item.color} tree needs water`);
-      } else {
-        console.log(`The ${item.color} tree doesnt needs water`);
-
+        console.log(`The ${item.getColor()} ${item.getType()} doesnt needs water`);
       }
     });
   }
-
-
-
 }

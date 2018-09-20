@@ -1,10 +1,10 @@
 'use strict'
 
 export abstract class Plant {
-  color: string;
-  currentAmountOfWater: number;
-  waterAbsorb: number;
-  needsWaterAmount: number
+  private color: string;
+  private currentAmountOfWater: number;
+  private waterAbsorb: number;
+  private needsWaterAmount: number
 
   constructor(color: string, waterAbsorb: number, needsWaterAmount: number) {
     this.color = color;
@@ -20,6 +20,12 @@ export abstract class Plant {
   waterUsage(waterAmount: number): number {
     this.currentAmountOfWater += waterAmount * this.waterAbsorb;
     return this.currentAmountOfWater;
+  }
+
+  abstract getType(): string;
+
+  getColor(): string {
+    return this.color;
   }
 
 }
