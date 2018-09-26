@@ -25,6 +25,10 @@ connection.connect(function (err) {
   console.log('Connection established');
 });
 
+app.get('/', (req, res) => {
+  res.sendfile(path.join(__dirname, 'index.html'))
+});
+
 app.get('/posts', function (req, res) {
   connection.query('Select * FROM posts;', function (err, results) {
     if (err) {
@@ -78,7 +82,6 @@ app.put('/posts/:id/upvote', jsonParser, function (req, res) {
   })
 });
 
-
 app.put('/posts/:id/downvote', jsonParser, function (req, res) {
   connection.query(`UPDATE posts SET score = score - 1 WHERE id=${req.params.id};`, function (err, results) {
     if (err) {
@@ -129,7 +132,6 @@ app.put('/posts/:id', jsonParser, function (req, res) {
     })
   })
 })
-
 
 app.listen(PORT, () => {
   console.log(`The server is up and running on ${PORT}`);

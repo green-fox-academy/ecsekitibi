@@ -12,6 +12,7 @@ window.onload = () => {
   myRequest.onload = () => {
     if (myRequest.status === 200) {
       const bookList = JSON.parse(myRequest.response);
+      console.log(bookList);
       bookList.forEach(book => {
         let newRow = document.createElement('tr');
         bookParent.appendChild(newRow);
