@@ -1,4 +1,149 @@
-img {
-  max-width: 100%;
-  height: auto;
+* {
+  font-family: 'Lato', sans-serif;
+  font-size: 16px;
+}
+
+#header {
+  background-image: url(http://images6.fanpop.com/image/photos/38600000/Andromeda-the-universe-38676564-1600-900.jpg);
+  position: relative;
+  width: 100%;
+  height: 300px;
+  
+}
+
+.button {
+  background: #4D86E0;
+  color: white;
+  font-weight: bold;
+  margin: 5px;
+  width: 320px;
+  height: 40px;
+}
+
+.centered {
+  text-align: center;
+  margin: 120px 0;
+  font-size: 40px;
+  font-weight: bold;
+  letter-spacing: 30px;
+  color: lightgrey;
+}
+
+.newpost {
+  color: lightgrey;
+  font-size: 30px;
+  text-align: center;
+  margin: 150px 0;
+  letter-spacing: 0px;
+}
+
+#wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  background: lightgray;
+}
+
+#content-container {
+  display: flex;
+  width: 100%;
+  margin: 10px;
+}
+
+#right-col {
+  width: 30%;
+  height: 100%;
+  margin: 10px;
+  padding: 5px;
+  border: 1px solid grey;
+
+}
+
+#post-container {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+}
+
+.postitem {
+  display: flex;
+  margin: 5px;
+  padding: 5px;
+  border: 1px solid grey;
+  
+}
+
+.scorediv {
+  display: flex;
+  flex-direction: column;
+  width: 5%;
+}
+
+.upvote {
+  height: 30px;
+  width: 30px;  
+  background: grey;
+  background-color: black;
+  font-weight: bold;
+ 
+}
+
+.score {
+  height: 30%;;
+  text-align: center;
+}
+
+.downvote {
+  height: 30px;
+  width: 30px;
+  background: grey;
+  background-color: black;
+  font-weight: bold;
+}
+
+.postcontent {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+}
+
+.interaction {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.date {
+  width: 30%;
+  font-size: 15px;
+  color: black;
+  text-align: left;
+}
+
+.deletebutton {
+  width: 150px;
+  height: 30px;
+  background: darkgrey;
+  border-radius: 10px;
+  color: white;
+  
+}
+
+.modifybutton {
+  width: 150px;
+  height: 30px;
+  background: darkgrey;
+  border-radius: 10px;
+  color: white;
+}
+
+#space {
+  font-weight: bold;
+  margin: 10px;
+}
+
+.titlediv {
+  font-size: 20px;
+  text-align: left;
+  font-weight: bold;
 }

@@ -1,0 +1,17 @@
+    let newRow = document.createElement('tr');
+        postParent.appendChild(newRow);
+        let newId = document.createElement('td');
+        newRow.appendChild(newId);
+        newId.innerText = post.id;
+        let newUser = document.createElement('td');
+        newRow.appendChild(newUser);
+        newUser.innerText = post.title;
+        let newUrl = document.createElement('td');
+        newRow.appendChild(newUrl);
+        newUrl.innerText = post.url;
+        let newTimestamp = document.createElement('td');
+        newRow.appendChild(newTimestamp);
+        newTimestamp.innerText = post.timestamp
+        let newScore = document.createElement('td');
+        newRow.appendChild(newScore);
+        newScore.innerText = post.score;

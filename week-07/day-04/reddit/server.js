@@ -9,6 +9,8 @@ const bodyParser = require('body-parser');
 const jsonParser = bodyParser.json();
 
 app.use('/assets', express.static('assets'));
+app.use(bodyParser.urlencoded({ extended: false }));
+
 
 const connection = mysql.createConnection({
   host: 'localhost',
@@ -29,6 +31,10 @@ app.get('/', (req, res) => {
   res.sendfile(path.join(__dirname, 'index.html'))
 });
 
+app.get('/addNewForm', (req, res) => {
+  res.sendfile(path.join(__dirname, 'addNewForm.html'))
+});
+
 app.get('/posts', function (req, res) {
   connection.query('Select * FROM posts;', function (err, results) {
     if (err) {
@@ -39,6 +45,7 @@ app.get('/posts', function (req, res) {
     res.json({
       posts: results
     });
+
   });
 });
 
@@ -55,9 +62,10 @@ app.post('/posts', jsonParser, function (req, res) {
         res.status(500).send('Database error');
         return;
       }
-      res.status(200).json({
-        results: selectedRow
-      })
+      //res.status(200).json({
+      //results: selectedRow
+      //})
+      res.redirect('/');
     })
   });
 })

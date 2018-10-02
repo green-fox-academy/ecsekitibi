@@ -6,26 +6,46 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Page Title</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" type="text/css" media="screen" href="./assets/css/style.css" />
-  <script src="./assets/js/script.js"></script>
+  <link rel="stylesheet" type="text/css" media="screen" href="/assets/css/style.css" />
+  <link href="https://fonts.googleapis.com/css?family=Lato:300" rel="stylesheet">
+  <script src="/assets/js/script.js"></script>
 </head>
 
 <body>
-  <img src="http://images6.fanpop.com/image/photos/38600000/Andromeda-astronomy-38676560-1600-900.jpg" alt="" srcset="">
-  <table>
-    <thead>
-      <tr>
-        <td>ID</td>
-        <td>User</td>
-        <td>URL</td>
-        <td>Timestamp</td>
-        <td>Score</td>
-      </tr>
-    </thead>
-    <tbody id='postContainer'>
-
-    </tbody>
-  </table>
+  <div id='wrapper'>
+    <div id='header'>
+      <div class="centered">
+        SPACE
+      </div>
+    </div>
+    <div id="content-container">
+      <div id="post-container">
+      </div>
+      <div id="right-col">
+        <!--a href button example
+          <a class="button" href="/addNewForm">SUBMIT A NEW POST</a>-->
+        <form action="/addNewForm" method="GET">
+          <button class="button" type='submit'>SUBMIT A NEW POST</button>
+        </form>
+        <br>
+        <div id="space">
+          ABOUT r/space
+        </div>
+        <br>
+        <div>
+          Share & discuss informative content on:
+          <ul>
+            <li>Astrophysics</li>
+            <li>Cosmology</li>
+            <li>Space Exploration</li>
+            <li>Planetary Science</li>
+            <li>Astrobiology</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
+
 
 </html>
